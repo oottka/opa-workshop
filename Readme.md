@@ -9,7 +9,7 @@ and run the VSCode command `Remote containers - Open workspace in container`.
 If you use the devcontainer, an OPA server with the policies from `opa/rego` is available on
 port 8182. The `opa` command line tool is also installed for you as well.
 
-## Manual setup
+## Manual setup if not using the devcontainer
 
 If you want to start the OPA server yourself, you can use a command similar to:
 
