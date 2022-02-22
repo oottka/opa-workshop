@@ -5,8 +5,7 @@ admin_token := io.jwt.encode_sign({
     "alg": "HS256"
 }, {
     "roles": [
-        "cp:admin",
-        "cp:reader"
+        "admin",
     ],
 }, {
     "kty": "oct",
@@ -18,24 +17,23 @@ reader_token := io.jwt.encode_sign({
     "alg": "HS256"
 }, {
     "roles": [
-        "cp:admin",
-        "cp:reader"
+        "reader"
     ],
 }, {
     "kty": "oct",
     "k": "test-signing-key"
 })
 
-test_admin_can_create_tenant {
+test_admin_can_create_document {
     allow with input as {
         "token": admin_token,
-        "operation": "tenant.createTenant",
+        "operation": "uploadDocument",
     }
 }
 
-test_reader_can_read_tenant {
+test_reader_can_view_document {
     allow with input as {
         "token": reader_token,
-        "operation": "tenant.getTenant",
+        "operation": "viewDocument",
     }
 }
