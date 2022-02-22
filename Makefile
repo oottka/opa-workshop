@@ -9,5 +9,5 @@ curl:
 		--header "Content-Type: application/json" \
 		--request POST \
 		--data @input.json \
-		http://localhost:8181/v1/data/rbac \
+		http://localhost:8182/v1/data/rbac \
 	| jq --color-output .
