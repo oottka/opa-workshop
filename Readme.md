@@ -17,7 +17,7 @@ If you want to start the OPA server yourself, you can use a command similar to:
 docker run --mount type=bind,src=<path-to-project>/opa-workshop/opa/rego,dst=/rego -p 8182:8181 openpolicyagent/opa:latest-debug run --server --skip-verify --watch --log-level debug /rego
 ```
 
-To download the OPA command line tool yourself, check out [these instructions](https://www.openpolicyagent.org/docs/v0.14.2/#running-opa).
+In addition download the OPA command line tool using [these instructions](https://www.openpolicyagent.org/docs/v0.14.2/#running-opa).
 
 ## Makefile
 
